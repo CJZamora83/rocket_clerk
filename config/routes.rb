@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-    root 'login#index'
+    root "welcome#index"
 
-    resources :login, only: [:signup, :profile]
+    resources :user, only: [:post]
+    resources :sessions, only: [:new, :create, :destroy]
+
+    get '/login', to: 'sessions#new'
+    post '/user', to: 'users#create'
+
 end

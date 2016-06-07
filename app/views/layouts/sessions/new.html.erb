@@ -1,0 +1,28 @@
+
+<body>
+<div id="content-container" class="center-align">
+<h1>Rocket Login</h1>
+<%= form_for (:session, url: login_path) do |f| %>
+Email <%= f.text_field :password
+Password <%= f.text_field :password
+<%= f.submit "Login" %>
+<%= end %>
+<!-- <form class="form-inline" method="post">
+  <div class="input-field col s12">
+          <label for="email">Email</label>
+          <input id="email" type="email" class="validate">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="password">Password</label>
+          <input id="password" type="password" class="validate">
+        </div>
+    <button class="btn waves-effect waves-light" type="submit" name="login">Login</button>
+  <br> -->
+  Or
+  <br>
+  <button class="btn waves-effect waves-light" type="submit" name="login">Register</button>
+</form>
+</div>
+</body>
