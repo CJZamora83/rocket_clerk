@@ -1,0 +1,12 @@
+<h2>Create your account now to start rocketing!</h2>
+<div class="form-container">
+<%= form_for (:user, url: new_path) do |f| %>
+First Name <%= f.text_field :first_name
+Last Name <%= f.text_field :last_name
+Handle <%= f.text_field :handle
+Email <%= f.text_field :email
+Password <%= f.text_field :password
+Position <%= f.text_field :position
+<%= f.submit "Create Account" %>
+<%= end %>
+</div>
