@@ -10,7 +10,14 @@
 <body>
   <div class="navbar">About</div>
   <div class="navbar">Contact</div>
-  <div class="navbar">Icons</div>
+  <div class="navbar">
+    <%= link_to "https://twitter.com/elonmusk" do %>
+      <%= fa_icon "twitter-square 2x" %>
+    <% end %>
+    <%= link_to "http://nasa.tumblr.com" do %>
+      <%= fa_icon "tumblr-square 2x" %>
+    <% end %>
+  </div>
 <% if session[:user_id] %>
   <%= "LOGGED IN AS USER #{session[:user_id]}" %>
 <% else %>
