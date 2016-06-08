@@ -1,12 +1,34 @@
-<h2>Create your account now to start rocketing!</h2>
-<div class="form-container">
-<%= form_for (:user, url: new_path) do |f| %>
-First Name <%= f.text_field :first_name
-Last Name <%= f.text_field :last_name
-Handle <%= f.text_field :handle
-Email <%= f.text_field :email
-Password <%= f.text_field :password
-Position <%= f.text_field :position
-<%= f.submit "Create Account" %>
-<%= end %>
-</div>
+<h1>Create a Rocket Clerk account</h1>
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+    <div class="field">
+    <%= f.label :handle %>
+    <%= f.text_field :handle %>
+  </div>
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>
