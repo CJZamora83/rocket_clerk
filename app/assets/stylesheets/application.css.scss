@@ -17,6 +17,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
+
 body {
   text-align: center;
   font-family: sans-serif;
@@ -25,6 +28,10 @@ body {
 .form-container {
   max-width: 400px;
   margin: 0 auto;
+}
+
+.navbar {
+  display: inline-block;
 }
 
 

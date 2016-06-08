@@ -8,11 +8,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="navbar">
-  <div class="navbar1">About</div>
-  <div class="navbar2">Contact</div>
-  <div class="navbar3">Social Media Icons</div>
-</div>
+  <div class="navbar">About</div>
+  <div class="navbar">Contact</div>
+  <div class="navbar">Icons</div>
 <% if session[:user_id] %>
   <%= "LOGGED IN AS USER #{session[:user_id]}" %>
 <% else %>
