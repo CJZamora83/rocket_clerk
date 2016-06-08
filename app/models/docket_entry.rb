@@ -1,3 +1,0 @@
-class DocketEntriesController < ActionController
-
-end

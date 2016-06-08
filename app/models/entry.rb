@@ -1,0 +1,3 @@
+class EntriesController < ActionController
+
+end
