@@ -8,22 +8,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="navbar">About</div>
-  <div class="navbar">Contact</div>
-  <div class="navbar">
+  <div class="col-md-4">About</div>
+  <div class="col-md-4">Contact</div>
+  <div class="col-md-4">
     <%= link_to "https://twitter.com/elonmusk" do %>
       <%= fa_icon "twitter-square 2x" %>
     <% end %>
     <%= link_to "http://nasa.tumblr.com" do %>
       <%= fa_icon "tumblr-square 2x" %>
     <% end %>
+    <%= link_to "http://www.facebook.com/marcothefave" do %>
+      <%= fa_icon "facebook-square 2x" %>
+    <% end %>
   </div>
-<% if session[:user_id] %>
-  <%= "LOGGED IN AS USER #{session[:user_id]}" %>
-<% else %>
-  <%= "NOT LOGGED IN" %>
-<% end %>
-<h1>ROCKET CLERK</h1>
+  <h1>ROCKET CLERK</h1>
+  <% if session[:user_id] %>
+    <span>Hi, <%= current_user.handle %>!</span> <%= link_to 'Log Out', logout_path, method: :delete %>
+  <% else %>
+    <%= link_to 'Log In', new_session_path %>
+  <% end %>
 <div class="tagline">
   <span>Modern</span>
   <span>Fluid</span>
