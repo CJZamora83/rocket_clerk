@@ -1,3 +1,2 @@
-class EntriesController < ActionController
-
+class Entry < ActiveRecord::Base
 end

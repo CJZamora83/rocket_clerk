@@ -20,8 +20,13 @@
 
 @import "font-awesome";
 
-body  {
-  font-family: sans-serif;
+// body  {
+//   font-family: sans-serif;
+// }
+
+html {
+  position: relative;
+  min-height: 100%;
 }
 
 .form-container {
@@ -29,9 +34,36 @@ body  {
   margin: 0 auto;
 }
 
+a:active {border:none; text-decoration:none; color: solid white}
+a:hover {border:none; text-decoration:none; color: solid white}
+a:visited {border:none; text-decoration:none; color: solid white}
+a:linked {border:none; text-decoration:none; color: solid white}
+
 .tagline {
   background-color: solid orange;
   border: 1px solid;
   max-width: 400px;
   margin: 0 auto;
+}
+
+.navbar {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  font-family: sans-serif;
+  background: #FFFFFF;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 10px 0px 10px 0px;
+    width: 100%;
 }
