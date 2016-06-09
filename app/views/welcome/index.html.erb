@@ -2,7 +2,13 @@
   <div class="col-md-4"><%= link_to 'Sign Up', new_user_path %>
 </div>
   <div class="col-md-4">Docket quicker, faster than anyone else</div>
-  <div class="col-md-4"><%= link_to 'Log In', new_session_path %>
+  <div>
+  <% if session[:user_id] %>
+    <span>Hi, <%= current_user.handle %>!</span> <%= link_to 'Log Out', logout_path, method: :delete %>
+  <% else %>
+    <%= link_to 'Log In', new_session_path %>
+  <% end %>
+</div>
 </div>
 </div>
 

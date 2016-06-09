@@ -5,6 +5,7 @@ class CreateCases < ActiveRecord::Migration
       t.string :name
       t.string :venue
       t.string :matter_type
+      t.string :lead_atty
 
       t.timestamps null: false
     end

@@ -1,8 +1,0 @@
-<% if session[:user_id] %>
-  <%= "LOGGED IN AS USER #{session[:user_id]}" %>
-<% else %>
-  <%= "NOT LOGGED IN" %>
-<% end %>
-<%= link_to 'Log Out', session_path('dummy'), method: :delete %>
-
-

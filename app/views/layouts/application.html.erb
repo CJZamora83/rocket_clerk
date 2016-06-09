@@ -6,34 +6,71 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+<script src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">About</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Contact <span class="sr-only">(current)</span></a></li>
+      <li>
+        <%= link_to "https://twitter.com/elonmusk" do %>
+        <%= fa_icon "twitter-square 2x" %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "http://nasa.tumblr.com" do %>
+        <%= fa_icon "tumblr-square 2x" %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "http://www.facebook.com/marcothefave" do %>
+        <%= fa_icon "facebook-square 2x" %>
+        <% end %>
+      </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <% if session[:user_id] %>
+              <span>Hi, <%= current_user.handle %>!</span>
+              <% else %>
+            Start<span class="caret"></span></a>
+            <% end %>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'Sign Up', new_user_path %></li>
+            <li role="separator" class="divider"></li>
+            <li>
+            <% if session[:user_id] %>
+            <%= link_to 'Log Out', logout_path, method: :delete %>
+            <% else %>
+            <%= link_to 'Log In', new_session_path %></li>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 <body>
-  <div class="col-md-4">About</div>
-  <div class="col-md-4">Contact</div>
-  <div class="col-md-4">
-    <%= link_to "https://twitter.com/elonmusk" do %>
-      <%= fa_icon "twitter-square 2x" %>
-    <% end %>
-    <%= link_to "http://nasa.tumblr.com" do %>
-      <%= fa_icon "tumblr-square 2x" %>
-    <% end %>
-    <%= link_to "http://www.facebook.com/marcothefave" do %>
-      <%= fa_icon "facebook-square 2x" %>
-    <% end %>
-  </div>
+<div class="logo">
   <h1>ROCKET CLERK</h1>
-  <% if session[:user_id] %>
-    <span>Hi, <%= current_user.handle %>!</span> <%= link_to 'Log Out', logout_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Log In', new_session_path %>
-  <% end %>
-<div class="tagline">
-  <span>Modern</span>
-  <span>Fluid</span>
-  <span>Simple</span>
 </div>
+<div class="col-md-12">
+Modern&nbsp;|&nbsp;Efficient&nbsp;|&nbsp;Simple</div>
+<br/>
+<br/>
 <main>
 <%= yield %>
 </main>
+
 </body>
 </html>
