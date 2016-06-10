@@ -1,0 +1,28 @@
+<%= form_for(@entry, :url => case_entries_path(@case)) do |f| %>
+  <% if @entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this shmaze from being saved:</h2>
+
+      <ul>
+      <% @entry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :seq_number %><br>
+    <%= f.text_field :seq_number %>
+  </div>
+<div class="field">
+    <%= f.label :Summary %><br>
+    <%= f.text_field :summary %>
+  </div>
+  <div class="field">
+      <%= f.label :Documents %><br>
+    <%= f.text_field :doc_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
