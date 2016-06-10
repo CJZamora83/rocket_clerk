@@ -15,5 +15,8 @@
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require turbolinks
-//= require_tree .
+//= require_self
 
+$(document).ready(function() {
+  $('.dropdown-toggle').dropdown();
+});
