@@ -31,12 +31,13 @@ ActiveRecord::Schema.define(version: 20160609031845) do
 
   create_table "entries", force: :cascade do |t|
     t.integer  "seq_number"
-    t.string   "entry_date"
+    t.date     "entered_on",   default: '2016-06-09'
+    t.date     "scheduled_on"
     t.string   "summary"
-    t.string   "schedule_date"
-    t.string   "doc_link"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "doc_url"
+    t.integer  "case_id"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "users", force: :cascade do |t|
