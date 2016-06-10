@@ -31,7 +31,7 @@
             <% end %>
           <ul class="dropdown-menu">
           <% if session[:user_id] %>
-            <%= link_to 'Profile', logout_path, method: :get %>
+            <%= link_to 'Profile', logout_path %>
             <% else %>
             <%= link_to 'Log In', new_session_path %></li>
             <% end %>
