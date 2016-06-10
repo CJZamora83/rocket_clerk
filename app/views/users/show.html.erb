@@ -4,18 +4,18 @@
       <table>
         <thead>
           <tr>
-            <td>Pic goes here</td>
+            <td><%= @user.handle.titleize %></td>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Name: @user.name</td>
+            <td>Name: <%= @user.name %></td>
           </tr>
           <tr>
-            <td>Handle: @user.handle</td>
+            <td>Handle: <%= @user.handle %></td>
           </tr>
           <tr>
-            <td>E-mail: @user.email</td>
+            <td>E-mail: <%= @user.email %></td>
           </tr>
           <tr>
             <!-- <td><a class="btn btn-primary">Update Profile</a></td> -->
