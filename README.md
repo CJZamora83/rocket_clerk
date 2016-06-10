@@ -19,7 +19,7 @@ This is what it looks like (for now):
 ###TRELLO
 My wireframing notes can be observed on my Trello project page at:
 
- [Salvanos Project](https://trello.com/b/xaWMPggW/rocket_clerk)
+ [Rocket Clerk](https://trello.com/b/xaWMPggW/rocket_clerk)
  
 ###Technologies:
 >- HTML5/CSS3  
