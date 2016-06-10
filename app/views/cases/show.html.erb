@@ -1,1 +1,37 @@
-show.html.erb
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <%= @case.plaintiff %> vs <%= @case.defendant %>
+        </h3>
+        <p>
+          <%= @case.number.upcase %> –
+          <%= @case.venue %>, <%= @case.matter_type.titleize %> |
+          Lead Attorney, <%= @case.lead_atty %>
+        </p>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <caption>Docket Entries</caption>
+          <thead>
+            <tr>
+              <th>Entry #</th>
+              <th>Date</th>
+              <th>Summary</th>
+              <th>Docs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%# @case.entries.each do |entry| %>
+            <!-- <tr></tr> -->
+            <%# end %>
+          </tbody>
+        </table>
+        <%= link_to "Add new entry to docket.", "" %>
+      </div>
+    </div>
+
+  </div>
+</div>
