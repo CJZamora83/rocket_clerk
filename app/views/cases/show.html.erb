@@ -24,9 +24,14 @@
             </tr>
           </thead>
           <tbody>
-            <%# @case.entries.each do |entry| %>
-            <!-- <tr></tr> -->
-            <%# end %>
+            <% @case.entries.each do |entry| %>
+            <tr>
+            <td><%= entry.seq_number %></td>
+            <td><%= entry.entered_on %></td>
+            <td><%= entry.summary %></td>
+            <td><%= entry.doc_url %></td>
+            </tr>
+            <% end %>
           </tbody>
         </table>
         <%= link_to "Add new entry to docket.", "" %>
