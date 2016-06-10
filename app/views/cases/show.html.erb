@@ -34,8 +34,11 @@
             <% end %>
           </tbody>
         </table>
-        <%= link_to "Add new entry to docket.", new_case_entry_path(@case) %>
+        <button type="button" class="btn btn-primary">
+          <%= link_to "Add new entry to docket.", new_case_entry_path(@case) %>
+        </button>
       </div>
+
     </div>
 
   </div>

@@ -1,1 +1,44 @@
-show.html.erb
+<main>
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-2">
+      <table>
+        <thead>
+          <tr>
+            <td>Pic goes here</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Name: @user.name</td>
+          </tr>
+          <tr>
+            <td>Handle: @user.handle</td>
+          </tr>
+          <tr>
+            <td>E-mail: @user.email</td>
+          </tr>
+          <tr>
+            <!-- <td><a class="btn btn-primary">Update Profile</a></td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-4 col-lg-offset-2">
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          View Existing Case
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <% @user.cases.each do |kase| %>
+            <li><%= link_to kase.venue, case_path(kase) %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div>
+        <button type="button" class="btn btn-primary"><%= link_to "Create Case", new_case_path %></button>
+      </div>
+    </div>
+  </div>
+
+</main>

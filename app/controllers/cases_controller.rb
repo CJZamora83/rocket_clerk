@@ -5,7 +5,7 @@ class CasesController < ApplicationController
   end
 
   def create
-    @case = Case.new case_params
+    @case = current_user.cases.new case_params
     if @case.save
       if current_user != nil
         current_user.cases << @case

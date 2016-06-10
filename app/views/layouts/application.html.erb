@@ -19,7 +19,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a class="pumice" href="#">Contact <span class="sr-only">(current)</span></a></li>
+        <li><a class="pumice" href="#">Docket & Rock It <span class="sr-only">(current)</span></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
@@ -30,6 +30,11 @@
             Start<span class="caret"></span></a>
             <% end %>
           <ul class="dropdown-menu">
+          <% if session[:user_id] %>
+            <%= link_to 'Profile', logout_path, method: :get %>
+            <% else %>
+            <%= link_to 'Log In', new_session_path %></li>
+            <% end %>
             <li><%= link_to 'Sign Up', new_user_path %></li>
             <li role="separator" class="divider"></li>
             <li>
