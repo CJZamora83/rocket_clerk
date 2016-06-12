@@ -20,13 +20,10 @@ class EntriesController < ApplicationController
   end
 
   def destroy
-    @case = Case.find(params[:case_id])
-    @entry = @case.entries.find(params[:id])
-    @entry.destroy
-  end
-
-    entry[:case_id] = nil
-    redirect_to show_case_path, notice: "Deleted entry!"
+   @entry = Entry.find(params[:id])
+   @case = Case.find(params[:case_id])
+   @entry.destroy
+   redirect_to case_path(@case)
   end
 
   private

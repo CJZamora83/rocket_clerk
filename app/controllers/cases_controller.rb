@@ -20,6 +20,10 @@ class CasesController < ApplicationController
     @case = Case.find(params[:id])
   end
 
+  def destroy
+    redirect_to case_path(@case.id)
+  end
+
 private
   def case_params
     params.require(:case).permit(:plaintiff, :defendant, :number, :venue, :matter_type, :lead_atty)

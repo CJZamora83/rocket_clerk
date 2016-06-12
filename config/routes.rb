@@ -1,17 +1,13 @@
 Rails.application.routes.draw do
 
-    root "welcome#index"
+   root "welcome#index"
+     resources :users
+     resources :sessions, only: [:new, :create, :destroy]
+     resources :cases do
+     resources :entries, only: [:new, :create, :show, :edit, :delete]
+     end
 
-    resources :users
-    resources :sessions, only: [:new, :create, :destroy]
-    resources :cases, only: [:new, :create, :show] do
-    resources :entries, only: [:new, :create, :edit, :destroy]
-    end
-
-
-
-
-    get '/login', to: 'sessions#new'
-    delete '/logout', to: 'sessions#destroy'
+   get '/login', to: 'sessions#new'
+   delete '/logout', to: 'sessions#destroy'
 
 end
