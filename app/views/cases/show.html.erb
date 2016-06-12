@@ -21,6 +21,7 @@
               <th>Date</th>
               <th>Summary</th>
               <th>Docs</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -30,12 +31,19 @@
             <td><%= entry.entered_on %></td>
             <td><%= entry.summary %></td>
             <td><%= entry.doc_url %></td>
+            <td>
+              <button type="button" class="btn btn-warning">
+                <%= link_to "Edit Entry", edit_case_entry_path(@case, entry) %>
+              </button>
+              <button type="button" class="btn btn-danger">
+                <%= link_to "Delete Entry", delete_case_entry_path(entry) %>
+              </button>
             </tr>
             <% end %>
           </tbody>
         </table>
         <button type="button" class="btn btn-primary">
-          <%= link_to "Add new entry to docket.", new_case_entry_path(@case) %>
+          <%= link_to "Add new entry", new_case_entry_path(@case) %>
         </button>
       </div>
 

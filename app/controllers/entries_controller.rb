@@ -15,6 +15,20 @@ class EntriesController < ApplicationController
     end
   end
 
+  def edit
+    @entry = @case.entries.edit(params[:case_id, @entry])
+  end
+
+  def destroy
+    @case = Case.find(params[:case_id])
+    @entry = @case.entries.find(params[:id])
+    @entry.destroy
+  end
+
+    entry[:case_id] = nil
+    redirect_to show_case_path, notice: "Deleted entry!"
+  end
+
   private
   def entry_params
     params.require(:entry).permit(:seq_number, :summary, :doc_url)
