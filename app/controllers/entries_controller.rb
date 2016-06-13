@@ -16,7 +16,8 @@ class EntriesController < ApplicationController
   end
 
   def edit
-    @entry = @case.entries.edit(params[:case_id, @entry])
+    @case = Case.find(params[:case_id])
+    @entry = @case.entries.find(params[:id])
   end
 
   def destroy
