@@ -11,7 +11,7 @@ Example:
 Therefore, Rocket Docket is, ultimately, meant to do more than perform the same functions as some of the other docketing software.  It is supposed to take into consideration a Docket Clerk's experience and minimize the amount of effort necessary to perform any given task.  The experience should be about fluidity and ease along with a tad of personalization for each and every user (Customized settings features to follow in the future).
 
 This is what it looks like (for now):
-[<img src="app/assets/images/rocket_clerk_screenshot.png">](app/assets/images/rocket_clerk_screenshot.png)
+[<img src="app/assets/images/rc_screenshot.png">](app/assets/images/rc_screenshot.png)
 
 ###Start Using
  [Start Rockin'](https://warm-island-81233.herokuapp.com/)
@@ -19,13 +19,14 @@ This is what it looks like (for now):
 ###TRELLO
 My wireframing notes can be observed on my Trello project page at:
 
- [Rocket Clerk](https://trello.com/b/xaWMPggW/rocket_clerk)
+ [Rocket Clerk](https://trello.com/b/dOdDEb3N/rocket-clerk)
  
 ###Technologies:
 >- HTML5/CSS3  
 >- Bootstrap  
 >- Ruby on Rails 
 >- Font-Awesome
+>- jQuery
 
 ###Contributors
 The following individuals assisted me immensely with the development of this game and contributed code and/or revisions to my initial code:
@@ -36,7 +37,9 @@ The following individuals assisted me immensely with the development of this gam
 >
 >###Future Updates
 >There is so much to add to this if it were to be utilized by a real world law firm that it would become Gmail-level complex.  Some things would be though:
+>
 >1. Add a litigation team to case as opposed to one user  
 >2. Add an e-mail function to distribution lists (litigation team of one senior lawyer, associate lawyers, assistants/paralegals)
->
->
+>  
+>  
+-Christian Zamora
