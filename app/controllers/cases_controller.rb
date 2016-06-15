@@ -18,6 +18,7 @@ class CasesController < ApplicationController
 
   def show
     @case = Case.find(params[:id])
+    @entries = @case.entries
   end
 
   def destroy

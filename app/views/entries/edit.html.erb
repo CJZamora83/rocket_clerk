@@ -1,4 +1,4 @@
-<%= form_for(@entry, :url => case_entries_path(@case)) do |f| %>
+<%= form_for [@case, @entry] do |f| %>
   <% if @entry.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this shmaze from being saved:</h2>
@@ -24,7 +24,7 @@
   </div>
   <div class="actions">
     <button type="button" class="btn btn-success">
-    <%= f.submit %>
+    <%= f.submit "Update Entry" %>
     </button>
   </div>
 <% end %>

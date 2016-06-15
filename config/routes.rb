@@ -4,10 +4,11 @@ Rails.application.routes.draw do
      resources :users
      resources :sessions, only: [:new, :create, :destroy]
      resources :cases do
-     resources :entries, only: [:new, :create, :show, :edit, :delete]
+     resources :entries
      end
 
-   get '/login', to: 'sessions#new'
-   delete '/logout', to: 'sessions#destroy'
+  get '/login', to: 'sessions#new'
+  delete '/logout', to: 'sessions#destroy'
+  delete '/entries/:id', to: 'entries#destroy', as: 'entry'
 
 end

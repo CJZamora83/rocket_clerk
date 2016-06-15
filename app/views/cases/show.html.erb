@@ -36,7 +36,7 @@
                 <%= link_to "Edit Entry", edit_case_entry_path(@case, entry) %>
               </button>
               <button type="button" class="btn btn-danger">
-                <%= link_to "Delete Entry", case_path(@case), method: :delete, data: {confirm: "Remove Entry?"} %>
+                <%= link_to "Delete Entry", entry_path(entry), method: :delete, data: {confirm: "Remove Entry?"} %>
               </button>
             </tr>
             <% end %>
