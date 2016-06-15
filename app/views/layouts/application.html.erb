@@ -11,7 +11,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand pumice" href="#">ROCKET CLERK</a>
+      <%= link_to 'ROCKET CLERK', root_path, class: "navbar-brand pumice" %>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -52,7 +52,7 @@
 </main>
     <footer class="footer navbar-fixed-bottom">
       <div class="row">
-        <div class="col-md-3"><a href="https://en.wikipedia.org/wiki/About_(surname)">About</a></div>
+        <div class="col-md-3"><%= link_to 'About', about_path %></div>
         <div class="col-md-3"><a href="https://en.wikipedia.org/wiki/Contact_(1997_American_film)">Contact</a></div>
         <div class="col-md-3"><a href="https://en.wikipedia.org/wiki/Privacy">Privacy</a></div>
         <div class="col-md-3">
